@@ -1,0 +1,38 @@
+html
+{
+
+    background: #1c7da3;
+background: linear-gradient(90deg,rgba(28, 125, 163, 1) 7%, rgba(93, 186, 130, 1) 39%, rgba(224, 203, 146, 1) 96%);
+}
+.center
+{
+    text-align: center;
+
+}
+.btn
+{
+    cursor:pointer;
+    padding: 12px;
+    background: darkslateblue;
+    border-radius: 50px;
+
+}
+.btn:hover
+{
+    background: rgb(12, 228, 217);
+}
+#botton3
+{
+    padding: 50px;
+}
+.container
+{
+display: grid;
+grid-template-columns:  45%;
+gap:20px;
+}
+.item
+{
+    color: rgba(8, 2, 2, 0.966);
+    padding: 10px;
+}

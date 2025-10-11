@@ -1,0 +1,84 @@
+
+html
+{
+
+    background: #1c7da3;
+background: linear-gradient(90deg,rgba(28, 125, 163, 1) 7%, rgba(93, 186, 130, 1) 39%, rgba(224, 203, 146, 1) 96%);
+}
+
+.gradient-text {
+    position: relative;
+   top: 33px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 3em;
+    font-weight: bold;
+}
+.center
+{
+    text-align: center;
+
+}
+.btn
+{
+    cursor:pointer;
+    padding: 12px;
+    background: darkslateblue;
+    border-radius: 50px;
+
+}
+.btn:hover
+{
+    background: black;
+}
+#botton
+{
+    padding: 50px;
+}
+.menu
+{
+    display: grid;
+   grid-template-columns: repeat(4,5fr);
+}
+.grid_item
+{
+text-align: center;
+color: brown;
+gap:15px;
+padding: 15px;
+
+}
+.chessboard {
+    background: #bbc993;
+    padding: 50px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 50px); 
+    grid-template-rows: repeat(8, 50px);
+    gap: 5px;
+    padding: 20px;
+    justify-self: center;
+    border: 2px solid #d9af3d;
+    border-radius: 10px;
+    background: #f2ca5c;
+}
+
+.square{ 
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+ } 
+
+.square:nth-child(odd)  { background: #fff; }
+.square:nth-child(even) { background: #000; }
+
+.square:nth-child(n+9):nth-child(-n+16),
+.square:nth-child(n+25):nth-child(-n+32),
+.square:nth-child(n+41):nth-child(-n+48),
+.square:nth-child(n+57):nth-child(-n+64) {
+  filter: invert(1);
+}

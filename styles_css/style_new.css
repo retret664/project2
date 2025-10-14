@@ -4,6 +4,7 @@ html
 
     background: #1c7da3;
 background: linear-gradient(90deg,rgba(28, 125, 163, 1) 7%, rgba(93, 186, 130, 1) 39%, rgba(224, 203, 146, 1) 96%);
+  animation:spin 0.0005s linear infinite;  
 }
 
 .gradient-text {
@@ -27,7 +28,7 @@ background: linear-gradient(90deg,rgba(28, 125, 163, 1) 7%, rgba(93, 186, 130, 1
     padding: 12px;
     background: darkslateblue;
     border-radius: 50px;
-
+transition: background-color 0.5s ;
 }
 .btn:hover
 {
@@ -65,12 +66,16 @@ padding: 15px;
     border: 2px solid #d9af3d;
     border-radius: 10px;
     background: #f2ca5c;
+    animation:spin 0.00003s linear infinite;
+    animation: blink 0.00004s infinite;
 }
 
 .square{ 
     width: 50px;
     height: 50px;
     border-radius: 10px;
+    animation:spin 0.0007s linear infinite;
+    animation: blink 0.00002s infinite;
  } 
 
 .square:nth-child(odd)  { background: #fff; }
@@ -81,4 +86,80 @@ padding: 15px;
 .square:nth-child(n+41):nth-child(-n+48),
 .square:nth-child(n+57):nth-child(-n+64) {
   filter: invert(1);
+}
+.ball
+{width:50px;
+height:50px;
+background: #ff6b6b;
+border-radius: 50%;
+animation: jump 1s ease-in-out infinite;
+}
+.text
+{
+    animation: blink 0.0005s infinite;
+}
+.animate_btn
+{
+    padding:12px 20px;
+    border-radius: 12px;
+    border: 0;
+    color: aliceblue;
+    background: blue;
+    cursor: pointer;
+    transition: transform .6s cubic-bezier(.68,-.55,.27,1.55), all .3s ease;
+}
+.animate_btn:hover{transform: scale(2);background: chocolate;}
+.a-underline
+{
+    position:relative;
+    text-decoration: none;
+    color: darkgreen;
+}
+.a-underline::after
+{
+    content:"";
+    position: absolute;left: 0;bottom: -2px;
+    height: 2px;width: 100%;
+    background: darkred;
+    transform: scaleX(0);
+    transform-origin: left;
+   
+    transition: transform 0.3s;
+    
+}
+.a-underline:hover::after
+{
+transform: scaleX(1);
+}
+.fade-in
+{
+    opacity: 0;
+    transform: translateY(12px);
+    animation: appear 600ms ease forwards;
+}
+@keyframes spin
+{
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+
+}
+@keyframes jump
+{
+0% {transform:translateY(0);}
+50% {transform:translateY(-50px);}
+1000% {transform:translateY(0);}
+}
+@keyframes blink
+{
+    0% {opacity: 1;}
+48% {opacity: 0;}
+1000% {opacity: 1;}
+}
+@keyframes appear
+{
+    to
+    {
+        opacity:1 ;
+        transform: translateY(0);
+    }
 }

@@ -17,6 +17,10 @@ background: linear-gradient(90deg,rgba(28, 125, 163, 1) 7%, rgba(93, 186, 130, 1
     border-radius: 50px;
 
 }
+img
+{
+    animation:spin 2s linear infinite;
+}
 .btn:hover
 {
     background: rgb(12, 228, 217);
@@ -24,4 +28,10 @@ background: linear-gradient(90deg,rgba(28, 125, 163, 1) 7%, rgba(93, 186, 130, 1
 #botton3
 {
     padding: 50px;
+}
+@keyframes spin
+{
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+
 }

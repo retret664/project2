@@ -4,7 +4,7 @@ html
 
     background: #1c7da3;
 background: linear-gradient(90deg,rgba(28, 125, 163, 1) 7%, rgba(93, 186, 130, 1) 39%, rgba(224, 203, 146, 1) 96%);
-  animation:spin 0.0005s linear infinite;  
+  /* animation:spin 0.0005s linear infinite;   */
 }
 
 .gradient-text {
@@ -66,8 +66,8 @@ padding: 15px;
     border: 2px solid #d9af3d;
     border-radius: 10px;
     background: #f2ca5c;
-    animation:spin 0.00003s linear infinite;
-    animation: blink 0.00004s infinite;
+    /* animation:spin 0.00003s linear infinite; */
+    /* animation: blink 0.00004s infinite; */
 }
 
 .square{ 
@@ -137,6 +137,19 @@ transform: scaleX(1);
     transform: translateY(12px);
     animation: appear 600ms ease forwards;
 }
+.grad
+{
+    min-height: 160px;
+    display: grid;
+    place-items: center;
+    color:crimson;
+
+    font-weight: 700;
+    background: linear-gradient(45deg, #132942, #315643,#745632 );
+    background-size: 300% 300%;
+    animation: shift 8s ease infinite;
+    border-radius: 10px;
+}
 @keyframes spin
 {
     0% {transform:rotate(0deg);}
@@ -162,4 +175,10 @@ transform: scaleX(1);
         opacity:1 ;
         transform: translateY(0);
     }
+}
+@keyframes shift
+{
+    0% {background-position:0% 50% ;}
+    50% {background-position:100% 50%;}
+    1000% {background-position:0% 50%}
 }

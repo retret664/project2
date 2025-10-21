@@ -1,0 +1,82 @@
+<!DOCTYPE HTML >
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="D:\TratsiakYaroslav\project2\styles_css\rigistr.css">
+    </head>
+    <body>
+        <header>
+          <div>
+              <h1 style="text-align: center;">Form regestration</h1>
+          </div>
+        </header>
+        <main >
+           <section class="forma">
+             
+               <div  class="grid_item" style="grid-row: 13 , 14; grid-column: 1;  gap: 10px;">
+                <form action="/search" method="GET">
+                <label for="q">Поиск:</label>
+                <input id="q" name="q" type="text" placeholder="Что ищем?"/>
+                <button type="submit">Найти</button>
+
+                
+                
+                </form>
+            </div>
+            <div class="grid_item" style="grid-row:  11 , 12; grid-column: 1;  gap: 10px;">
+               
+                    <label for="q">Город</label>
+                    <select id="city name="city>
+                        <option value="msk">Москва</option>
+                        <option value="spb">Санкт петербург</option>
+                        <option value="mnsk">Минск</option>                    
+                    
+                    </select>
+                
+                
+                
+                
+               
+            </div>
+           
+<div class="grid_item" style="grid-row: 1,2; grid-column: 1; gap: 10px;" >
+<label class="auth_label">имя
+    <input class="auth_input" name="name" type="text" placeholder="ваше имя" required>
+</label>
+</div>
+<div class="grid_item" style="grid-row: 3,4; grid-column: 1;  gap: 10px;">
+<label class="auth_label">фамилия
+    <input class="auth_input" name="name" type="text" placeholder="ваше имя" required>
+</label>
+</div>
+<div class="grid_item"  style="grid-row: 5,6; grid-column: 1;  gap: 10px;">
+<label class="auth_label">отчество
+    <input class="auth_input" name="name" type="text" placeholder="ваше имя" required>
+</label>
+</div>
+<div class="grid_item"  style="grid-row: 7,8; grid-column: 1;  gap: 10px;">
+<button class="clean" type="reset" >
+сброс
+</button>
+</div>
+<div class="grid_item" style="grid-row: 9,10; grid-column: 1;  ">
+<label class="form_option">
+    <input class="form_checkbox" type="checkbox" id="agree" name="agree" value="yes">
+    <span class="form_option-text">согласен с условиями</span>
+</label>
+</div >
+               
+                <form class="form" action="/upload" method="POST" enctype="multipart/form-data" style="grid-row: 15 , 16; grid-column: 1;  gap: 10px;"  >
+                    <label class="form_option">
+                      <span class="form_option-text">Aaarap</span>
+                      <input class="form_file" type="file" name="avatar" accept="image/*">
+                    </label>
+                    <button class="form_button form_button-primary" type="submit">Загрузить</button>
+                  </form>
+            
+           </section>
+
+        </main>
+       
+    </body>
+</html>
